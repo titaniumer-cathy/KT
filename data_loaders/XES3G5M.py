@@ -65,7 +65,7 @@ class XES3G5MDataModule(pl.LightningDataModule):
         self.hf_dataset_ids = config.hf_dataset_ids
         self.batch_size = config.batch_size
         self.val_fold = config.val_fold
-        self.max_seq_length = config.max_seq_length
+        self.max_seq_length = config.max_seq_length - 1
         self.padding_value = config.padding_value
     
     def question_embedding(self) -> int:
@@ -138,6 +138,7 @@ class XES3G5MDataModule(pl.LightningDataModule):
 
         # Get the maximum sequence length in this batch
         max_len = max(x.shape[0] for x in questions)
+        print(max_len)
         max_len = min(max_len, self.max_seq_length) # Cap at max_seq_length if needed
 
         # Pad the sequences if not done already

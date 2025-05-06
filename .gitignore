@@ -129,9 +129,10 @@ dmypy.json
 .pyre/
 
 # custom directories
-.ckpts
+*.ckpt
+*.pkl
+*.json
 .datasets
-ckpts
 datasets
 .vscode
 
