@@ -1,0 +1,19 @@
+{
+    "train_config": {
+        "num_epochs": 20,
+        "learning_rate": 0.001,
+        "optimizer": "adam"
+    },
+    "dkt": {
+        "embedding_size": 2000,
+        "hidden_size": 1500
+    },
+    "atdkt": {
+        "hidden_size": 768
+    },
+    "sakt": {
+        "n": 199,
+        "num_attn_heads": 6,
+        "dropout": 0.2
+    }
+}
