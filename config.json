@@ -5,10 +5,11 @@
         "optimizer": "adam"
     },
     "dkt": {
-        "embedding_size": 2000,
-        "hidden_size": 1500
+        "embedding_size": 768,
+        "hidden_size": 768
     },
     "atdkt": {
+        "emb_type": "trans",
         "hidden_size": 768
     },
     "sakt": {

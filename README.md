@@ -16,8 +16,8 @@ We keep other parts of the method the same as in the paper. So there is not much
 
 The results as followed:
 
-Val Epoch: 4,   AUC: 0.8337527586525456,   Loss Mean: 0.4070945978164673,    ACC: 0.8395813641416936
-Test AUC: 0.8205, Test Loss: 0.4324, Test Acc: 0.8238
+Val Epoch: 3,   AUC: 0.8324132987206366,   Loss Mean: 0.4091655910015106,    ACC: 0.8393345315813445
+Test AUC: 0.8192, Test Loss: 0.4355, Test Acc: 0.8240
 
 SAKT ()
 This model is a transformer-based self-attentive model for knowledge tracing.
@@ -25,6 +25,12 @@ We change the model a little bit to let the model output response probability ba
 For the (query, key, value) in transformers, we let the query to be concepts_embedding, which is initialized with provided pretrained embeddings. Key and Value are concept-response pairs.
 
 The results as followed:
+QKV all in concepts: 
+Val Epoch: 20,   AUC: 0.7951804341991286,   Loss Mean: 0.40735262632369995,    ACC: 0.82246763995749
+Test AUC: 0.7854, Test Loss: 0.4321, Test Acc: 0.8080
+QKV all in questions:
+Val Epoch: 3,   AUC: 0.8484403158891555,   Loss Mean: 0.35861316323280334,    ACC: 0.8436550808817408
+Test AUC: 0.8374, Test Loss: 0.3845, Test Acc: 0.8292
 
 ATDKT(link: https://arxiv.org/pdf/2302.07942)
 
@@ -35,10 +41,13 @@ The IK task captures students’ global historical performance by progressively 
 I think QT task is most helpful for this project. So I use QT loss along with traditional KT loss in this project.
 
 Pretrained questions_embedding and concepts_embedding are used in this project. They are used to initialize the question embedding and concept embedding in atdkt model.
+LSTM QT task
+Val Epoch: 4,   AUC: 0.8451147264424443,   Loss Mean: 0.3550294516846902,    ACC: 0.8447540734718665
+Test AUC: 0.8320, Test Loss: 0.3834, Test Acc: 0.8291
 
-Val Epoch: 4,   AUC: 0.847025884132298,   Loss Mean: 0.3539289161759413,    ACC: 0.8452624310068712
-Test AUC: 0.8342, Test Loss: 0.3822, Test Acc: 0.8299
-
-
+transformers QT task
+Val Epoch: 5,   AUC: 0.8440720169122361,   Loss Mean: 0.3563565856343898,    ACC: 0.8441634384167455
+Test AUC: 0.8305, Test Loss: 0.3851, Test Acc: 0.8287
 
 Result Details
+Training Details

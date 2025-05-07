@@ -138,7 +138,6 @@ class XES3G5MDataModule(pl.LightningDataModule):
 
         # Get the maximum sequence length in this batch
         max_len = max(x.shape[0] for x in questions)
-        print(max_len)
         max_len = min(max_len, self.max_seq_length) # Cap at max_seq_length if needed
 
         # Pad the sequences if not done already
