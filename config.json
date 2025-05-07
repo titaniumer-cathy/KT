@@ -10,7 +10,13 @@
     },
     "atdkt": {
         "emb_type": "trans",
-        "hidden_size": 768
+        "hidden_size": 768,
+        "dropout": 0.2,
+        "num_layers": 1, 
+        "num_attn_heads": 6,
+        "l1": 0.5,
+        "l2": 0.5, 
+        "start": 50
     },
     "sakt": {
         "n": 199,
