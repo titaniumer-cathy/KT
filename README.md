@@ -51,8 +51,14 @@ The config.json file contains most hyperparameter used in training.
 1 Nvidia V100 card is used while training, each epoch of the training costs ~ 1 minute.
 
 The validation accuracy and auc while train is below:
-![validation accuracy](/images/VAL_Accuracy.jpeg "Validation Accuracy")
-![validation auc](/images/Val_AUC.jpeg "Validation AUC")
+| ![validation accuracy](/images/VAL_Accuracy.jpeg "Validation Accuracy") | 
+|:--:| 
+| *Validation Accuracy* |
+
+| !![validation auc](/images/Val_AUC.jpeg "Validation AUC") | 
+|:--:| 
+| *Validation AUC* |
+
 
 ## Best validation AUC achieved for each model is:
 
